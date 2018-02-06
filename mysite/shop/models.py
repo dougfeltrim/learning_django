@@ -7,6 +7,10 @@ class Sell(models.Model):
     sell_price = models.DecimalField(max_digits=6, decimal_places=2)
     sell_amount = models.IntegerField(default=0)
     sell_description = models.TextField(default="description")
+    sell_amount = models.IntegerField(default=0)
 
     def __str__(self):
         return self.sell_name
+        return self.sell_price
+        return self.sell_amount
+        return self.sell_description
