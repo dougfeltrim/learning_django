@@ -8,12 +8,3 @@ class Sell(models.Model):
 
     def __str__(self):
         return self.sell_name
-
-    def __str__(self):
-        return self.sell_price
-
-    def __str__(self):
-        return self.sell_amount
-
-    def __str__(self):
-        return self.sell_description
