@@ -5,10 +5,11 @@ from django.http import HttpResponse
 from .models import Cidade
 
 def index(request):
+    detail_city = Cidade.objects.order_by('cidade')[:5]
+    context = {'detail_city': detail_city}
+    return render(request, 'webservice/index.html', context)
 
-    return HttpResponse("Hello, world. You're at the address index.")
-
-def cities(request, local_id):
+def detail(request, local_id):
     detail_city = Cidade.objects.order_by('nome')[:5]
     output = ' | '.join([q.nome for q in detail_city])
     return HttpResponse(output)
