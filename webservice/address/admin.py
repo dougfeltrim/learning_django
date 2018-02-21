@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Local
+from .models import Cidade
 
-admin.site.register(Local)
+admin.site.register(Cidade)
