@@ -6,7 +6,7 @@ class Cidade(models.Model):
     nome = models.CharField(max_length=200)
     estado = models.CharField(max_length=200)
     cep = models.IntegerField(default=0)
-    complemento = models.CharField(max_length=200)
+    complemento = models.CharField(max_length=200, default = "complemento")
 
     def __str__(self):
         return self.nome
